@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    
+    {% for post in posts %}
+        <div style="border: 1px solid green;">
+            <h4>{{ post.title }}</h4>
+            <p>{{ post.body }}</p>
+            <a href="publish/{{post.id}}">Publish</a>
+            <a href="delete/{{post.id}}">Delete</a>
+        </div>
+        <br>
+    {% endfor %}
+        
+{% endblock content %}
+    

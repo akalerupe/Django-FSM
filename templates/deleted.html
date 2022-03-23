@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+        
+{% block content %}
+    {% for post in posts %}
+    <div style="border: 1px solid black;">
+        <h4>{{ post.title }}</h4>
+        <p>{{ post.body }}</p>
+        <a href="restore/{{post.id}}">Restore</a>
+    </div>
+    <br>
+{% endfor %}
+{% endblock content %}
+    
